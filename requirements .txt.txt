@@ -1,0 +1,12 @@
+## Backend
+npm install express
+npm install mongoose
+npm install nodemon (optiona)
+npm install jsonwebtoken
+npm install bycryptjs
+
+
+
+##frontend
+npx create-react-app <name>
+npm install react-router-dom
