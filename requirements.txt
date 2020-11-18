@@ -10,3 +10,4 @@ npm install bycryptjs
 ##frontend
 npx create-react-app <name>
 npm install react-router-dom
+npm install materialize-css@next
