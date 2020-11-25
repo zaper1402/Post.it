@@ -14,6 +14,7 @@ const Profile = ()=>{
             setpics(result.mypost)
         })
     },[])
+
     return (
         <div style={{maxWidth:"1150px" ,margin:"0px auto"}}>
             <div style={{
@@ -22,9 +23,12 @@ const Profile = ()=>{
                 margin:"18px 0px",
                 borderBottom :"1px solid grey"
             }}>
-                <div>
+                <div style={{display:"flex",flexDirection:"column"}}>
                     <img style={{width:"160px",height:"160px",borderRadius:"80px"}}
                     src={state?state.pic:"loading"}/>
+                    <button style={{margin:"5px 0px 5px 0px"}}className="btn waves-effect waves-light #4fc3f7 light-blue lighten-2"> 
+                    Update Pic
+                    </button>
                 </div>
                 <div>
                     <h4>{state?state.name:"loading..."}</h4>
