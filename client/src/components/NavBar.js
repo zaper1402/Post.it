@@ -23,12 +23,25 @@ const NavBar = () => {
                     >
                         Logout
                     </button>
+                </li>,
+                <li>
+                <a class="dark-toggle" 
+                onClick={()=>{
+                }}
+                >
+                <i class="material-icons left">brightness_4</i></a>
                 </li>
+                
+                
             ]
         }else{
             return [
                 <li><Link to="/signin">Sign in</Link></li>,
-                <li><Link to="/signup">Signup</Link></li>
+                <li><Link to="/signup">Signup</Link></li>,
+                <li>
+                    <a class="dark-toggle" onclick="localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark'); localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark')" title="Dark/light"><i class="material-icons left">brightness_4</i>
+                    Toggle Dark Mode</a>
+                </li>
             ]
         }
     }

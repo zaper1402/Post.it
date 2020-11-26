@@ -1,4 +1,4 @@
-import React,{useEffect,createContext,useReducer,useContext} from 'react'
+import React,{useEffect,createContext,useReducer,useContext, useState} from 'react'
 import Navbar from './components/NavBar'
 import './App.css'
 import {BrowserRouter,Route,Switch,useHistory} from 'react-router-dom'
@@ -12,6 +12,8 @@ import SubscribedUserPosts from './components/screens/FollowedUserPosts'
 import {reducer,initialState} from './reducers/userReducer'
 export const UserContext = createContext()
 
+
+
 const Routing = ()=>{
   const history = useHistory()
   const {state,dispatch} = useContext(UserContext);
@@ -22,7 +24,13 @@ const Routing = ()=>{
     }else{
       history.push('/signin')
     }
+
+    
   },[])
+  
+  // const darkTheme = useState("false")
+
+
   return(
     <Switch>
       <Route exact path="/">
@@ -49,6 +57,7 @@ const Routing = ()=>{
     </Switch>
   )
 }
+
 
 function App() {
   const [state,dispatch] = useReducer(reducer,initialState)
